@@ -75,6 +75,7 @@ The solution is generated in the **Java** programming language, in a project wit
 
 For its implementation, the maven file must be compiled, to install the Junit dependencies.
 
+The solution is executed in the **console**, when executing the **Main.java Class** in the folder **src/test/java/com/ioet/exercise/schedule/test**
 There is a Main class which is executed, and in which some methods are implemented, to execute you must have a file of employees with their schedules, and you must copy the path to change it in the Main class.
 
 At the end of the execution of the main class, a file is generated in the path **C:/Coincidences.txt**, which can be modified to preference.
