@@ -83,3 +83,5 @@ At the end of the execution of the main class, a file is generated in the path *
 It is recommended to open the project with an **IDE** like **Eclipse** or **Netbeans**, that will facilitate the execution and manipulation of methods.
 
 **Each method of the project is commented which will give more information.**
+
+### **Created by:** Omar Sanmartin
