@@ -40,6 +40,7 @@ public class AdminCompany {
 				}
 				company.addEmployee(builtEmployee(line));
 			}
+			System.out.println("Company with a list of employess created successfully from a txt file");
 		} catch (FileNotFoundException e) {
 			System.out.println("File not found error " + e);
 		} catch (IOException e) {
@@ -60,7 +61,7 @@ public class AdminCompany {
 				System.out.println("Error closing FileReader "+e);
 			}
 		}
-		System.out.println("Company with a list of employess created successfully from a txt file");
+		
 		return company;
 	}
 	
@@ -115,9 +116,14 @@ public class AdminCompany {
 		ArrayList<Employee> employeeList = null;
 		String [] resultArray = null;
 		String results = "";
-		System.out.println("Looking for coincidences...");
+		
 		try {
 			employeeList = company.getEmployees();
+			if (employeeList.size()<1) {
+				return resultArray;
+			}
+			
+			System.out.println("Looking for coincidences...");
 
 			for (int i = 0; i < employeeList.size() - 1; i++) {
 				for (int j = i + 1; j < employeeList.size(); j++) {
@@ -133,7 +139,7 @@ public class AdminCompany {
 			}
 			if (results.length()>1) {
 				resultArray = results.split(",");
-				System.out.println("No coincidences...");
+				//System.out.println("No coincidences...");
 			}
 			
 		} catch (Exception e) {
@@ -237,6 +243,8 @@ public class AdminCompany {
 
 		} catch (IOException e) {
 			System.out.println("Error creating file "+e);
+		} catch (NullPointerException e) {
+			System.out.println("Error with the String array "+e);
 		} finally {
 
 			try {
